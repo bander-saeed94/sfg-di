@@ -16,7 +16,7 @@ public class SfgDiApplication {
 		MyController myController = (MyController) ctx.getBean("myController");
 
 		String greeting = myController.sayHey();
-		System.out.printf(greeting);
+		System.out.println(greeting);
 
 		System.out.println("----- Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
