@@ -13,10 +13,10 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
-		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHey();
-		System.out.println(greeting);
+		System.out.println("----- Primary");
+		MyController myController = (MyController) ctx.getBean("myController");
+		System.out.println(myController.sayHey());
 
 		System.out.println("----- Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");

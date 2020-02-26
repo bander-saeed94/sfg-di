@@ -1,12 +1,18 @@
 package saeed.bander.sfgdi.controllers;
 
 import org.springframework.stereotype.Controller;
+import saeed.bander.sfgdi.services.GreetingService;
 
 @Controller
 public class MyController {
 
+    private final GreetingService greetingService;
+
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
     public String sayHey() {
-        System.out.println("Hello world! x");
-        return "Hey Folks! x";
+        return greetingService.sayGreeting();
     }
 }
