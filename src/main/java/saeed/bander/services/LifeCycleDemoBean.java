@@ -1,4 +1,4 @@
-package saeed.bander.sfgdi.services;
+package saeed.bander.services;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;

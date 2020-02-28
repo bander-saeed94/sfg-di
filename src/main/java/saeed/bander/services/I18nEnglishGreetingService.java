@@ -1,13 +1,13 @@
-package saeed.bander.sfgdi.services;
+package saeed.bander.services;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile({"ES", "default"})
+@Profile("EN")
 @Service("i18nService")
-public class I18nSpanishGreetingService implements GreetingService {
+public class I18nEnglishGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hola Mundo - ES";
+        return "Hello World - English";
     }
 }

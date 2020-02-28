@@ -1,4 +1,4 @@
-package saeed.bander.sfgdi.services;
+package saeed.bander.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

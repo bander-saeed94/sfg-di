@@ -4,10 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import saeed.bander.sfgdi.controllers.*;
 
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"saeed.bander.services", "saeed.bander.sfgdi"})
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
@@ -17,8 +19,7 @@ public class SfgDiApplication {
 		System.out.println(i18nController.sayHello());
 
 		System.out.println("----- Primary");
-		MyController myController = (MyController) ctx.getBean("myController");
-		System.out.println(myController.sayHey());
+		System.out.println(ctx.getBean(MyController.class).sayHey());
 
 		System.out.println("----- Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");

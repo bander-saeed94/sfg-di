@@ -1,4 +1,4 @@
-package saeed.bander.sfgdi.services;
+package saeed.bander.services;
 
 public interface GreetingService {
     String sayGreeting();
